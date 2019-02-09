@@ -1,5 +1,4 @@
-POST https://guarded-journey-42926.herokuapp.com/api/persons
-Content-Type: application/json
+POST https://guarded-journey-42926.herokuapp.com
 
 {
     "name": "wgjkuijkuighkhkijl",

@@ -77,6 +77,7 @@ let persons = [
   })
 
   app.post('/persons', (request, response) => {
+    console.log(request.body)
     const body = request.body
     if (body.name === undefined) {
       return response.status(400).json({ error: 'name missing' })
