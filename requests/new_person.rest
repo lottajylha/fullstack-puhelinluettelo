@@ -1,4 +1,4 @@
-POST http://localhost:3001/persons
+POST https://guarded-journey-42926.herokuapp.com/api/persons
 Content-Type: application/json
 
 {

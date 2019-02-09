@@ -17,7 +17,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
-
+app.use(express.static('build'))
 morgan.token('body', (req) => {return JSON.stringify(req.body)})
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
