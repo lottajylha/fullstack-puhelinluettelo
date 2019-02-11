@@ -76,7 +76,7 @@ let persons = [
     }
   })
 
-  app.post('/persons', (request, response) => {
+  app.post('/api/persons', (request, response) => {
     console.log(request.body)
     const body = request.body
     if (body.name === undefined) {
@@ -97,7 +97,7 @@ let persons = [
     const person = {
       id: randomId,
       name: body.name,
-      number:body.number
+      number: body.number
     }
   
     persons = persons.concat(person)

@@ -1,4 +1,5 @@
-POST https://guarded-journey-42926.herokuapp.com
+POST http://localhost:3001/api/persons
+
 
 {
     "name": "wgjkuijkuighkhkijl",
