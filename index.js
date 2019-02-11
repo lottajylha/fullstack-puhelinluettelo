@@ -6,7 +6,9 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
-require('dotenv').config()
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 const Person = require('./models/person')
 app.use(cors())
 app.use(express.static('build'))
