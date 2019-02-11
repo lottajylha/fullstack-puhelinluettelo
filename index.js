@@ -28,10 +28,9 @@ app.get('/api', (req, res) => {
 })
 
 app.get('/api/info', (req, res) => {
-  const number = persons.length
-  console.log('list', number)
-  
-  res.send(`<p>Puhelinluettelossa ${number} henkilön tiedot</p><p>${Date()}</p>`)
+  Person.count({}, function( err, count){
+    res.send(`<p>Puhelinluettelossa ${count} henkilön tiedot</p><p>${Date()}</p>`)
+  })
 })
 
 app.get('/api/persons', (req, res) => {
